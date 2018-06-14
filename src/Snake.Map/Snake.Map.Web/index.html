@@ -13,5 +13,13 @@
 <body>
     dit is een map
 </body>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+    setInterval(function () {
+        axios.get('http://localhost:5002/api/values').then(function (v) {
+            document.body.innerHTML = "dit is een map " + v.data;
+        });
+    }, 1000);
+</script>
 
 </html>
