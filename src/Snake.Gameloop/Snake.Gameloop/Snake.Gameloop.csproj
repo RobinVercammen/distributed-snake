@@ -1,17 +1,14 @@
-<Project Sdk="Microsoft.NET.Sdk">
-
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp2.1</TargetFramework>
+    <LangVersion>7.2</LangVersion>
   </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="MassTransit" Version="5.1.2" />
-    <PackageReference Include="Masstransit.RabbitMQ" Version="5.1.2" />
-  </ItemGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\Snake.Gameloop.Contracts\Snake.Gameloop.Contracts.csproj" />
   </ItemGroup>
-
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Azure.ServiceBus" Version="3.0.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+  </ItemGroup>
 </Project>

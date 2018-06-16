@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snake.Map.Api", "Snake.Map.Api\Snake.Map.Api.csproj", "{E70BAEA2-837B-4DBA-978E-7B81317C67E8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snake.Gameloop.Contracts", "..\Snake.Gameloop\Snake.Gameloop.Contracts\Snake.Gameloop.Contracts.csproj", "{4DA15077-7F10-4E3C-81E1-780C8158C727}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,17 @@ Global
 		{E70BAEA2-837B-4DBA-978E-7B81317C67E8}.Release|x64.Build.0 = Release|Any CPU
 		{E70BAEA2-837B-4DBA-978E-7B81317C67E8}.Release|x86.ActiveCfg = Release|Any CPU
 		{E70BAEA2-837B-4DBA-978E-7B81317C67E8}.Release|x86.Build.0 = Release|Any CPU
+		{4DA15077-7F10-4E3C-81E1-780C8158C727}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DA15077-7F10-4E3C-81E1-780C8158C727}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DA15077-7F10-4E3C-81E1-780C8158C727}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{4DA15077-7F10-4E3C-81E1-780C8158C727}.Debug|x64.Build.0 = Debug|Any CPU
+		{4DA15077-7F10-4E3C-81E1-780C8158C727}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{4DA15077-7F10-4E3C-81E1-780C8158C727}.Debug|x86.Build.0 = Debug|Any CPU
+		{4DA15077-7F10-4E3C-81E1-780C8158C727}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DA15077-7F10-4E3C-81E1-780C8158C727}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DA15077-7F10-4E3C-81E1-780C8158C727}.Release|x64.ActiveCfg = Release|Any CPU
+		{4DA15077-7F10-4E3C-81E1-780C8158C727}.Release|x64.Build.0 = Release|Any CPU
+		{4DA15077-7F10-4E3C-81E1-780C8158C727}.Release|x86.ActiveCfg = Release|Any CPU
+		{4DA15077-7F10-4E3C-81E1-780C8158C727}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
