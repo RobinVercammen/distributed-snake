@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible"
+        content="ie=edge">
+    <title>Sneke</title>
+    <style>
+        #map {
+            display: block;
+            font-size: 0;
+        }
+
+        #map>.row> {
+            display: block;
+            font-size: 0;
+        }
+
+        #map>.row>.cell {
+            display: inline-block;
+            height: 50px;
+            width: 50px;
+        }
+
+        #map>.row>.cell.empty {
+            background-color: #dddddd;
+        }
+
+        #map>.row>.cell.snake {
+            background-color: #AADDAA;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="map"></div>
+</body>
+
+<script type="module"
+    src="script.js"></script>
+
+</html>
