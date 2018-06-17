@@ -18,7 +18,7 @@ Build a website which captures user input and dispatches it trough its own backe
 ### Map (Web app)
 All snakes are drawn on a map. Subscribe to the necessary events and use SingalR or something else to draw a map in the frontend.
 ### Items (Web app)
-Let admins or AI place items on the playing field. Manage these items via a web application and distribute the corresponding events on the bus.
+Manage these items via a web application and distribute the corresponding events on the bus.
 ### Leaderboard (Web app)
 Every snake get associated with a user. The longest snake wins. Subscribe to snake events to determine the winners.
 ### Users (Web app)

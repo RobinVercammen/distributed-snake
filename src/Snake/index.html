@@ -9,43 +9,55 @@
         content="ie=edge">
     <title>Document</title>
     <style>
-            img{
-            display:block;
+        html {
+            background: #333333;
+        }
+
+        img {
+            display: block;
             margin: auto;
             width: 33%;
         }
-        .input{
+
+        .input {
             width: 15vw;
             height: 70vh;
             border: 1px solid #2244AA;
         }
-        .leaderboard{
+
+        .leaderboard {
             width: 15vw;
             height: 70vh;
-            border: 1px solid #AA4422;   
+            border: 1px solid #AA4422;
         }
-        .map{
+
+        .map {
             width: 60vw;
             height: 70vh;
             border: 1px solid #AAAAAA;
         }
-        .container{
+
+        .container {
             text-align: center;
         }
+
     </style>
 </head>
 
 <body>
     <img src="snake.png"
         alt="">
-        <div class="container">
-        <iframe class="leaderboard" src="http://localhost:8082"
-        frameborder="0"></iframe> 
-        <iframe class="map" src="http://localhost:8083"
-        frameborder="0"></iframe>  
-       <iframe class="input" src="http://localhost:8081"
-        frameborder="0"></iframe>
-        </div>
+    <div class="container">
+        <iframe class="leaderboard"
+            src="http://localhost:8082"
+            frameborder="0"></iframe>
+        <iframe class="map"
+            src="http://localhost:8083"
+            frameborder="0"></iframe>
+        <iframe class="input"
+            src="http://localhost:8081"
+            frameborder="0"></iframe>
+    </div>
 </body>
 
 </html>

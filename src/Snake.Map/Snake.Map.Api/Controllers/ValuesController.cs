@@ -14,7 +14,7 @@ namespace Snake.Map.Api.Controllers
         [HttpGet]
         public ActionResult<int> Get()
         {
-            return Program.TickCount;
+            return Program.SnakeYPostion;
         }
     }
 }

@@ -17,11 +17,14 @@ namespace Snake.Map.Api
 {
     public class Program
     {
-        public static int TickCount = 0;
-        private const string ServiceBusConnectionString = "Endpoint=sb://disctributed-snake-dev.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=9F7E91nb2/vEsCPFoRlyvnU+leERdQTDmYRuyzgHfcI=";
+        public static int SnakeYPostion = 0;
+
+        private const string ServiceBusConnectionString =
+            "Endpoint=sb://disctributed-snake-dev.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=9F7E91nb2/vEsCPFoRlyvnU+leERdQTDmYRuyzgHfcI=";
+
         private const string QueueName = "tick";
         static IQueueClient queueClient;
-        
+
         public static async Task Main(string[] args)
         {
             queueClient = new QueueClient(ServiceBusConnectionString, QueueName);
@@ -31,7 +34,7 @@ namespace Snake.Map.Api
             CreateWebHostBuilder(args).Build().Run();
             await queueClient.CloseAsync();
         }
-        
+
         static void RegisterOnMessageHandlerAndReceiveMessages()
         {
             // Configure the message handler options in terms of exception handling, number of concurrent messages to deliver, etc.
@@ -49,17 +52,18 @@ namespace Snake.Map.Api
             // Register the function that processes messages.
             queueClient.RegisterMessageHandler(ProcessMessagesAsync, messageHandlerOptions);
         }
-        
+
         static async Task ProcessMessagesAsync(Message message, CancellationToken token)
         {
             // Process the message.
-            Console.WriteLine($"Received message: SequenceNumber:{message.SystemProperties.SequenceNumber} Body:{Encoding.UTF8.GetString(message.Body)}");
+            Console.WriteLine(
+                $"Received message: SequenceNumber:{message.SystemProperties.SequenceNumber} Body:{Encoding.UTF8.GetString(message.Body)}");
 
             var msg = Encoding.UTF8.GetString(message.Body);
 
-            var tick = JsonConvert.DeserializeObject<Tick>(msg);
+            var snake = JsonConvert.DeserializeObject<UpdateSnake>(msg);
 
-            TickCount = tick.Sequence;
+            SnakeYPostion = snake.Postions[0].Y;
 
             // Complete the message so that it is not received again.
             // This can be done only if the queue Client is created in ReceiveMode.PeekLock mode (which is the default).
@@ -69,7 +73,7 @@ namespace Snake.Map.Api
             // If queueClient has already been closed, you can choose to not call CompleteAsync() or AbandonAsync() etc.
             // to avoid unnecessary exceptions.
         }
-        
+
         // Use this handler to examine the exceptions received on the message pump.
         static Task ExceptionReceivedHandler(ExceptionReceivedEventArgs exceptionReceivedEventArgs)
         {
@@ -80,7 +84,7 @@ namespace Snake.Map.Api
             Console.WriteLine($"- Entity Path: {context.EntityPath}");
             Console.WriteLine($"- Executing Action: {context.Action}");
             return Task.CompletedTask;
-        }    
+        }
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)

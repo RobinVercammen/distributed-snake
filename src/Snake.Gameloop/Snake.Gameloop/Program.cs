@@ -10,6 +10,9 @@ namespace Snake.Gameloop
 {
     internal class Program
     {
+        private static readonly Guid SnakeId = Guid.Parse("27524dc8-5778-422e-91d9-6016173d11eb");
+        private static readonly SnakePostion Head = new SnakePostion {X = 5, Y = 5};
+
         private const string ServiceBusConnectionString =
             "Endpoint=sb://disctributed-snake-dev.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=9F7E91nb2/vEsCPFoRlyvnU+leERdQTDmYRuyzgHfcI=";
 
@@ -28,12 +31,13 @@ namespace Snake.Gameloop
             var seq = 0;
             while (true)
             {
-                var msg = new Message(Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(new Tick()
+                var msg = new Message(Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(new UpdateSnake()
                 {
-                    Sequence = seq++
+                    Id = SnakeId,
+                    Postions = new SnakePostion[] {new SnakePostion {X = Head.X, Y = Head.Y++}}
                 })));
                 await queueClient.SendAsync(msg);
-                await Task.Delay(100);
+                await Task.Delay(1000);
             }
         }
     }
