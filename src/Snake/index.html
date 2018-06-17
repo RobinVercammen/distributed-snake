@@ -8,15 +8,44 @@
     <meta http-equiv="X-UA-Compatible"
         content="ie=edge">
     <title>Document</title>
+    <style>
+            img{
+            display:block;
+            margin: auto;
+            width: 33%;
+        }
+        .input{
+            width: 15vw;
+            height: 70vh;
+            border: 1px solid #2244AA;
+        }
+        .leaderboard{
+            width: 15vw;
+            height: 70vh;
+            border: 1px solid #AA4422;   
+        }
+        .map{
+            width: 60vw;
+            height: 70vh;
+            border: 1px solid #AAAAAA;
+        }
+        .container{
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
-    <iframe src="http://localhost:8081"
+    <img src="snake.png"
+        alt="">
+        <div class="container">
+        <iframe class="leaderboard" src="http://localhost:8082"
+        frameborder="0"></iframe> 
+        <iframe class="map" src="http://localhost:8083"
+        frameborder="0"></iframe>  
+       <iframe class="input" src="http://localhost:8081"
         frameborder="0"></iframe>
-    <iframe src="http://localhost:8082"
-        frameborder="0"></iframe>
-    <iframe src="http://localhost:8083"
-        frameborder="0"></iframe>
+        </div>
 </body>
 
 </html>
