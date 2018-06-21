@@ -3,13 +3,20 @@
 
 ## Running application locally
 
+Install latest version of Node  
+Install latest version of dotnet core  
+Install docker and run  
+`docker run -d --hostname distributed-snake-rabbit --name distributed-snake-rabbit -p 15672:15672 -p 5672:5672 rabbitmq:3-management`   
+-- or --  
+install rabbitmq locally
+
 Make sure the scripts are executable  
 `chmod +x <name-of-script>`  
 
 Install all dependencies using the provided install script  
-`./01_install.sh`  
+`./1_install.sh`  
 Run the application (boot webservers and compile/run other apps)  
-`./02_run.sh`
+`./2_run.sh`
 
 ## Domains
 ### Input (Web app)
