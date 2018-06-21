@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Snake.Items.Contracts
+namespace Snake.MapEditor.Contracts
 {
-    public class RemoveItem
+    public class HarvestApple
     {
         public Guid ItemId { get; set; }
     }

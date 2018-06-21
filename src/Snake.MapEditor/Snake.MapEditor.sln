@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snake.Items.Api", "Snake.Items.Api\Snake.Items.Api.csproj", "{6877B3FA-6191-47A2-A26F-2B8D780471A1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snake.MapEditor.Api", "Snake.MapEditor.Api\Snake.MapEditor.Api.csproj", "{6877B3FA-6191-47A2-A26F-2B8D780471A1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snake.Items.Contracts", "Snake.Items.Contracts\Snake.Items.Contracts.csproj", "{41ABD2DA-4857-408E-A5AA-92D2A2069CA1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snake.MapEditor.Contracts", "Snake.MapEditor.Contracts\Snake.MapEditor.Contracts.csproj", "{41ABD2DA-4857-408E-A5AA-92D2A2069CA1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

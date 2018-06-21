@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Snake.Items.Contracts
+namespace Snake.MapEditor.Contracts
 {
     public class HarvestBerry
     {
